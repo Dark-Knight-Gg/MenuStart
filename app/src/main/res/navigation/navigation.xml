@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentUser">
+
+    <fragment
+        android:id="@+id/fragmentUser"
+        android:name="com.example.menustart.FragmentUser"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_fragmentUser_to_fragmentSetting"
+            app:destination="@id/fragmentSetting" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSetting"
+        android:name="com.example.menustart.FragmentSetting"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_fragmentSetting_to_fragmentCheckin"
+            app:destination="@id/fragmentCheckin" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCheckin"
+        android:name="com.example.menustart.FragmentCheckin"
+        android:label="fragment_checkin"
+        tools:layout="@layout/fragment_checkin" />
+</navigation>
